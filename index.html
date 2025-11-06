@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,7 +17,6 @@
             -webkit-user-select: none;
             -moz-user-select: none;
         }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: #0a0e1a;
@@ -26,19 +26,17 @@
             -webkit-tap-highlight-color: transparent;
             line-height: 1.6;
         }
-
         ::-webkit-scrollbar {
             width: 0;
             height: 0;
         }
-
         /* Splash Screen */
         #splash {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 100dvh; /* Gunakan dvh untuk mobile */
             background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0d1b2a 100%);
             display: flex;
             justify-content: center;
@@ -46,19 +44,16 @@
             z-index: 9999;
             flex-direction: column;
         }
-
         .splash-content {
             text-align: center;
             position: relative;
             z-index: 10;
         }
-
         .splash-logo {
             text-align: center;
             animation: float 2s ease-in-out infinite;
             margin-bottom: 40px;
         }
-
         .logo-icon {
             width: 120px;
             height: 120px;
@@ -74,18 +69,15 @@
             z-index: 10;
             overflow: hidden;
         }
-
         .logo-icon img {
             width: 120px;
             height: 120px;
             object-fit: contain;
         }
-
         .logo-icon i {
             font-size: 50px;
             color: #ffffff;
         }
-
         .splash-logo h1 {
             font-size: 36px;
             font-weight: 800;
@@ -98,14 +90,12 @@
             z-index: 10;
             margin-bottom: 8px;
         }
-
         .splash-subtitle {
             font-size: 16px;
             color: #94a3b8;
             font-weight: 500;
             animation: slideUp 0.8s ease-out 0.5s both;
         }
-
         .particles-container {
             position: absolute;
             top: 0;
@@ -115,7 +105,6 @@
             overflow: hidden;
             z-index: 1;
         }
-
         .particle {
             position: absolute;
             bottom: -20px;
@@ -125,7 +114,6 @@
             border-radius: 50%;
             animation: particleFloat 3s ease-in-out infinite;
         }
-
         @keyframes particleFloat {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -142,7 +130,6 @@
                 opacity: 0;
             }
         }
-
         .progress-container {
             width: 240px;
             height: 6px;
@@ -153,7 +140,6 @@
             position: relative;
             z-index: 10;
         }
-
         .progress-bar {
             height: 100%;
             background: linear-gradient(90deg, #3b82f6, #60a5fa);
@@ -161,26 +147,21 @@
             width: 0%;
             transition: width 0.3s ease;
         }
-
         @keyframes scaleIn {
             0% { transform: scale(0) rotate(-180deg); opacity: 0; }
             100% { transform: scale(1) rotate(0); opacity: 1; }
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-
         @keyframes slideUp {
             0% { transform: translateY(30px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
         }
-
         @keyframes fadeOut {
             to { opacity: 0; visibility: hidden; }
         }
-
         /* Setup Screen */
         #setup {
             display: none;
@@ -188,14 +169,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 100dvh; /* Gunakan dvh untuk mobile */
             background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 100%);
             justify-content: center;
             align-items: center;
             z-index: 9998;
             padding: 20px;
         }
-
         .setup-card {
             background: rgba(26, 31, 53, 0.8);
             backdrop-filter: blur(20px);
@@ -207,12 +187,10 @@
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
             animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-
         .setup-header {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .setup-icon {
             width: 80px;
             height: 80px;
@@ -224,12 +202,10 @@
             justify-content: center;
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
         }
-
         .setup-icon i {
             font-size: 36px;
             color: #fff;
         }
-
         .setup-card h2 {
             font-size: 28px;
             font-weight: 700;
@@ -238,16 +214,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .setup-subtitle {
             font-size: 14px;
             color: #64748b;
         }
-
         .form-group {
             margin-bottom: 24px;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 10px;
@@ -256,11 +229,9 @@
             font-weight: 500;
             letter-spacing: 0.3px;
         }
-
         .input-wrapper {
             position: relative;
         }
-
         .input-icon {
             position: absolute;
             left: 18px;
@@ -269,7 +240,6 @@
             color: #64748b;
             font-size: 16px;
         }
-
         .form-group input {
             width: 100%;
             padding: 16px 18px 16px 50px;
@@ -281,18 +251,15 @@
             transition: all 0.3s ease;
             font-weight: 500;
         }
-
         .form-group input:focus {
             outline: none;
             border-color: #3b82f6;
             background: rgba(10, 14, 26, 0.95);
             box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
         }
-
         .form-group input::placeholder {
             color: #475569;
         }
-
         .btn-primary {
             width: 100%;
             padding: 18px;
@@ -310,12 +277,10 @@
             justify-content: center;
             gap: 10px;
         }
-
         .btn-primary:active {
             transform: translateY(2px);
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
-
         /* Main App */
         #app {
             display: none;
@@ -324,11 +289,9 @@
             background: linear-gradient(180deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
             min-height: 100vh;
         }
-
         @keyframes fadeIn {
             to { opacity: 1; }
         }
-
         /* Header */
         .header {
             padding: 24px 20px;
@@ -339,13 +302,11 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(96, 165, 250, 0.08);
         }
-
         .profile {
             display: flex;
             align-items: center;
             gap: 14px;
         }
-
         .profile-avatar {
             width: 50px;
             height: 50px;
@@ -359,25 +320,21 @@
             box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
             border: 2px solid rgba(96, 165, 250, 0.2);
         }
-
         .profile-info {
             display: flex;
             flex-direction: column;
             gap: 2px;
         }
-
         .profile-greeting {
             font-size: 12px;
             color: #64748b;
             font-weight: 500;
         }
-
         .profile-name {
             font-size: 16px;
             font-weight: 700;
             color: #e2e8f0;
         }
-
         .menu-btn {
             background: rgba(59, 130, 246, 0.12);
             border: 1.5px solid rgba(59, 130, 246, 0.25);
@@ -392,17 +349,14 @@
             align-items: center;
             justify-content: center;
         }
-
         .menu-btn:active {
             transform: scale(0.92);
             background: rgba(59, 130, 246, 0.2);
         }
-
         /* Balance Card */
         .balance-section {
             padding: 24px 20px;
         }
-
         .balance-card {
             padding: 36px 28px;
             border-radius: 28px;
@@ -414,12 +368,10 @@
             overflow: hidden;
             animation: balanceCard 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-
         @keyframes balanceCard {
             0% { transform: translateY(30px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
         }
-
         .balance-card::before {
             content: '';
             position: absolute;
@@ -430,7 +382,6 @@
             background: radial-gradient(circle, rgba(96, 165, 250, 0.15), transparent);
             border-radius: 50%;
         }
-
         .balance-label {
             font-size: 13px;
             color: #94a3b8;
@@ -439,7 +390,6 @@
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
-
         .balance-amount {
             font-size: 46px;
             font-weight: 800;
@@ -449,20 +399,17 @@
             letter-spacing: -1px;
             line-height: 1;
         }
-
         .balance-negative {
             background: linear-gradient(135deg, #f87171, #ef4444);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         /* Action Buttons */
         .actions {
             display: flex;
             gap: 16px;
             padding: 0 20px 24px;
         }
-
         .action-btn {
             flex: 1;
             padding: 24px 20px;
@@ -479,7 +426,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .action-btn::before {
             content: '';
             position: absolute;
@@ -491,56 +437,46 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
-
         .action-btn:active::before {
             transform: translateY(0);
         }
-
         .action-btn i {
             font-size: 26px;
             position: relative;
             z-index: 1;
         }
-
         .action-btn span {
             position: relative;
             z-index: 1;
         }
-
         .btn-add {
             background: linear-gradient(135deg, #10b981, #34d399);
             color: #fff;
             box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
             animation: actionBtn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
         }
-
         .btn-subtract {
             background: linear-gradient(135deg, #ef4444, #f87171);
             color: #fff;
             box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
             animation: actionBtn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
         }
-
         @keyframes actionBtn {
             0% { transform: translateY(30px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
         }
-
         .btn-add:active {
             transform: scale(0.95);
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
-
         .btn-subtract:active {
             transform: scale(0.95);
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
         }
-
         /* Transactions */
         .transactions {
-            padding: 0 20px 120px;
+            padding: 0 20px 24px; /* Hanya sedikit padding bawah untuk menjaga jarak dari tombol aksi */
         }
-
         .section-header {
             display: flex;
             justify-content: space-between;
@@ -548,13 +484,11 @@
             margin-bottom: 20px;
             animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
         }
-
         .section-title {
             font-size: 20px;
             font-weight: 700;
             color: #e2e8f0;
         }
-
         .transaction-count {
             font-size: 13px;
             color: #64748b;
@@ -563,13 +497,11 @@
             border-radius: 20px;
             font-weight: 600;
         }
-
         .transaction-list {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-
         .transaction-item {
             background: rgba(26, 31, 53, 0.5);
             backdrop-filter: blur(20px);
@@ -584,7 +516,6 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .transaction-item::before {
             content: '';
             position: absolute;
@@ -594,27 +525,22 @@
             height: 100%;
             transition: width 0.3s ease;
         }
-
         .transaction-item.type-add::before {
             background: linear-gradient(180deg, #10b981, #34d399);
         }
-
         .transaction-item.type-subtract::before {
             background: linear-gradient(180deg, #ef4444, #f87171);
         }
-
         @keyframes slideInUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         .transaction-main {
             display: flex;
             gap: 16px;
             flex: 1;
             align-items: center;
         }
-
         .transaction-icon {
             width: 48px;
             height: 48px;
@@ -625,22 +551,18 @@
             font-size: 20px;
             flex-shrink: 0;
         }
-
         .icon-add {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.1));
             color: #34d399;
         }
-
         .icon-subtract {
             background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(248, 113, 113, 0.1));
             color: #f87171;
         }
-
         .transaction-info {
             flex: 1;
             min-width: 0;
         }
-
         .transaction-desc {
             font-size: 15px;
             font-weight: 600;
@@ -650,34 +572,28 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .transaction-date {
             font-size: 12px;
             color: #64748b;
             font-weight: 500;
         }
-
         .transaction-right {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
         .transaction-amount {
             font-size: 17px;
             font-weight: 800;
             text-align: right;
             white-space: nowrap;
         }
-
         .amount-positive {
             color: #34d399;
         }
-
         .amount-negative {
             color: #f87171;
         }
-
         .delete-btn {
             width: 38px;
             height: 38px;
@@ -693,12 +609,117 @@
             transition: all 0.3s ease;
             flex-shrink: 0;
         }
-
         .delete-btn:active {
             transform: scale(0.9);
             background: rgba(239, 68, 68, 0.2);
         }
-
+        /* --- Bagian Target Tabungan sekarang ada di bawah transaksi --- */
+        .savings-targets {
+            padding: 40px 20px 120px; /* Padding atas untuk menjaga jarak saat digulir ke bawah */
+            /* padding-bottom tetap untuk menjaga ruang dari tombol aksi */
+            margin-top: 0; /* Pastikan tidak ada margin-top yang menarik ke atas */
+        }
+        .savings-targets .section-header {
+            margin-bottom: 20px;
+            animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both; /* Sesuaikan delay jika perlu */
+        }
+        .target-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px; /* Jarak dari header */
+        }
+        .target-item {
+            background: rgba(26, 31, 53, 0.5);
+            backdrop-filter: blur(20px);
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(96, 165, 250, 0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            animation: slideInUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .target-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #3b82f6, #60a5fa); /* Warna biru untuk target */
+        }
+        .target-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .target-desc {
+            font-size: 15px;
+            font-weight: 600;
+            color: #e2e8f0;
+            flex: 1;
+        }
+        .target-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .target-action-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .target-edit-btn {
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            color: #60a5fa;
+        }
+        .target-delete-btn {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        .target-action-btn:active {
+            transform: scale(0.9);
+        }
+        .target-progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .target-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 4px;
+            min-width: 0%; /* Untuk mencegah nilai negatif */
+        }
+        .target-amounts {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .target-image-preview {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 10px;
+            border: 1px solid rgba(96, 165, 250, 0.1);
+        }
         /* Sidebar */
         .sidebar {
             position: fixed;
@@ -706,7 +727,7 @@
             right: -100%;
             width: 100%;
             max-width: 380px;
-            height: 100vh;
+            height: 100dvh; /* Gunakan dvh untuk mobile */
             background: linear-gradient(180deg, #1a1f35 0%, #0a0e1a 100%);
             transition: right 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
             z-index: 1000;
@@ -715,11 +736,9 @@
             box-shadow: -20px 0 60px rgba(0, 0, 0, 0.8);
             border-left: 1px solid rgba(96, 165, 250, 0.1);
         }
-
         .sidebar.active {
             right: 0;
         }
-
         .sidebar-header {
             padding: 28px 24px;
             background: rgba(26, 31, 53, 0.6);
@@ -732,7 +751,6 @@
             top: 0;
             z-index: 10;
         }
-
         .sidebar-title {
             font-size: 24px;
             font-weight: 700;
@@ -743,7 +761,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .close-btn {
             background: rgba(59, 130, 246, 0.12);
             border: 1.5px solid rgba(59, 130, 246, 0.25);
@@ -758,21 +775,17 @@
             align-items: center;
             justify-content: center;
         }
-
         .close-btn:active {
             transform: scale(0.9);
             background: rgba(59, 130, 246, 0.2);
         }
-
         .sidebar-content {
             padding: 24px;
         }
-
         .stats-section {
             margin-bottom: 32px;
             animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
         }
-
         .section-label {
             font-size: 12px;
             color: #64748b;
@@ -781,13 +794,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
         }
-
         .stat-card {
             background: rgba(26, 31, 53, 0.6);
             backdrop-filter: blur(20px);
@@ -797,17 +808,14 @@
             transition: all 0.3s ease;
             animation: statCard 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
         }
-
         .stat-card:nth-child(1) { animation-delay: 0.1s; }
         .stat-card:nth-child(2) { animation-delay: 0.2s; }
         .stat-card:nth-child(3) { animation-delay: 0.3s; }
         .stat-card:nth-child(4) { animation-delay: 0.4s; }
-
         @keyframes statCard {
             0% { transform: translateY(20px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
         }
-
         .stat-icon-wrapper {
             width: 40px;
             height: 40px;
@@ -818,46 +826,38 @@
             margin-bottom: 14px;
             font-size: 18px;
         }
-
         .stat-income-icon {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.1));
             color: #34d399;
         }
-
         .stat-expense-icon {
             background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(248, 113, 113, 0.1));
             color: #f87171;
         }
-
         .stat-transaction-icon {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(96, 165, 250, 0.1));
             color: #60a5fa;
         }
-
         .stat-avg-icon {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(192, 132, 252, 0.1));
             color: #a78bfa;
         }
-
         .stat-label-text {
             font-size: 12px;
             color: #64748b;
             margin-bottom: 8px;
             font-weight: 600;
         }
-
         .stat-value {
             font-size: 20px;
             font-weight: 800;
             color: #e2e8f0;
         }
-
         /* Chart Section */
         .chart-section {
             margin-bottom: 32px;
             animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
         }
-
         .chart-container {
             background: rgba(26, 31, 53, 0.6);
             backdrop-filter: blur(20px);
@@ -867,7 +867,6 @@
             height: 260px;
             position: relative;
         }
-
         .chart-legend {
             display: flex;
             justify-content: center;
@@ -875,7 +874,6 @@
             margin-top: 16px;
             flex-wrap: wrap;
         }
-
         .legend-item {
             display: flex;
             align-items: center;
@@ -883,27 +881,22 @@
             font-size: 12px;
             color: #94a3b8;
         }
-
         .legend-color {
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
-
         .legend-income {
             background: linear-gradient(135deg, #10b981, #34d399);
         }
-
         .legend-expense {
             background: linear-gradient(135deg, #ef4444, #f87171);
         }
-
         /* Settings Section */
         .settings-section {
             margin-bottom: 32px;
             animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;
         }
-
         .settings-group {
             background: rgba(26, 31, 53, 0.6);
             backdrop-filter: blur(20px);
@@ -912,32 +905,27 @@
             padding: 20px;
             margin-bottom: 20px;
         }
-
         .settings-item {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             padding: 16px 0;
             border-bottom: 1px solid rgba(96, 165, 250, 0.1);
         }
-
         .settings-item:last-child {
             border-bottom: none;
         }
-
         .settings-label {
             flex: 1;
             font-size: 14px;
             color: #e2e8f0;
             font-weight: 600;
         }
-
         .settings-value {
             font-size: 14px;
             color: #94a3b8;
             font-weight: 500;
         }
-
         .settings-btn {
             width: 100%;
             padding: 18px;
@@ -955,23 +943,19 @@
             gap: 10px;
             margin-top: 10px;
         }
-
         .settings-btn:active {
             transform: translateY(2px);
             background: rgba(239, 68, 68, 0.15);
         }
-
         .btn-secondary {
             border: 1.5px solid rgba(59, 130, 246, 0.2);
             background: rgba(59, 130, 246, 0.08);
             color: #60a5fa;
             margin-top: 10px;
         }
-
         .btn-secondary:active {
             background: rgba(59, 130, 246, 0.15);
         }
-
         /* Credits Section */
         .credits-section {
             margin-top: 32px;
@@ -983,13 +967,11 @@
             border-radius: 20px;
             border: 1px solid rgba(96, 165, 250, 0.12);
         }
-
         .credits-text {
             font-size: 14px;
             color: #94a3b8;
             margin-bottom: 8px;
         }
-
         .credits-author {
             font-size: 16px;
             font-weight: 700;
@@ -997,14 +979,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         /* Overlay */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 100dvh; /* Gunakan dvh untuk mobile */
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(4px);
             opacity: 0;
@@ -1012,12 +993,10 @@
             transition: all 0.3s ease;
             z-index: 999;
         }
-
         .overlay.active {
             opacity: 1;
             visibility: visible;
         }
-
         /* Modal */
         .modal {
             position: fixed;
@@ -1033,11 +1012,9 @@
             border: 1px solid rgba(96, 165, 250, 0.1);
             border-bottom: none;
         }
-
         .modal.active {
             bottom: 0;
         }
-
         .modal-handle {
             width: 40px;
             height: 5px;
@@ -1045,12 +1022,10 @@
             border-radius: 10px;
             margin: 0 auto 24px;
         }
-
         .modal-header {
             text-align: center;
             margin-bottom: 28px;
         }
-
         .modal-icon {
             width: 60px;
             height: 60px;
@@ -1061,36 +1036,30 @@
             justify-content: center;
             font-size: 26px;
         }
-
         .modal-icon-add {
             background: linear-gradient(135deg, #10b981, #34d399);
             color: #fff;
         }
-
         .modal-icon-subtract {
             background: linear-gradient(135deg, #ef4444, #f87171);
             color: #fff;
         }
-
         .modal-title {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 6px;
             color: #e2e8f0;
         }
-
         .modal-subtitle {
             font-size: 13px;
             color: #64748b;
             font-weight: 500;
         }
-
         .empty-state {
             text-align: center;
             padding: 80px 20px;
             color: #475569;
         }
-
         .empty-icon {
             width: 100px;
             height: 100px;
@@ -1102,17 +1071,14 @@
             justify-content: center;
             border: 2px dashed rgba(59, 130, 246, 0.2);
         }
-
         .empty-icon i {
             font-size: 48px;
             color: rgba(96, 165, 250, 0.3);
         }
-
         .empty-state p {
             font-size: 15px;
             font-weight: 600;
         }
-
         /* Toast Notification */
         .toast {
             position: fixed;
@@ -1134,45 +1100,35 @@
             gap: 12px;
             max-width: 90%;
         }
-
         .toast.show {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
         }
-
         .toast.success {
             border-left: 4px solid #10b981;
         }
-
         .toast.error {
             border-left: 4px solid #ef4444;
         }
-
         .toast.info {
             border-left: 4px solid #3b82f6;
         }
-
         .toast-icon {
             font-size: 20px;
         }
-
         .toast.success .toast-icon {
             color: #10b981;
         }
-
         .toast.error .toast-icon {
             color: #ef4444;
         }
-
         .toast.info .toast-icon {
             color: #3b82f6;
         }
-
         .toast-message {
             font-size: 14px;
             font-weight: 600;
         }
-
         /* Modal Konfirmasi Hapus */
         .confirm-modal {
             position: fixed;
@@ -1191,13 +1147,11 @@
             visibility: hidden;
             transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        
         .confirm-modal.active {
             opacity: 1;
             visibility: visible;
             transform: translate(-50%, -50%) scale(1);
         }
-        
         .confirm-icon {
             width: 70px;
             height: 70px;
@@ -1210,7 +1164,6 @@
             background: linear-gradient(135deg, #ef4444, #f87171);
             color: #fff;
         }
-        
         .confirm-title {
             font-size: 22px;
             font-weight: 700;
@@ -1218,7 +1171,6 @@
             margin-bottom: 10px;
             color: #e2e8f0;
         }
-        
         .confirm-message {
             font-size: 14px;
             color: #94a3b8;
@@ -1226,12 +1178,10 @@
             margin-bottom: 28px;
             line-height: 1.5;
         }
-        
         .confirm-actions {
             display: flex;
             gap: 12px;
         }
-        
         .confirm-btn {
             flex: 1;
             padding: 16px;
@@ -1246,30 +1196,26 @@
             justify-content: center;
             gap: 8px;
         }
-        
         .confirm-btn.cancel {
             background: rgba(59, 130, 246, 0.1);
             border: 1.5px solid rgba(59, 130, 246, 0.25);
             color: #60a5fa;
         }
-        
         .confirm-btn.delete {
             background: linear-gradient(135deg, #ef4444, #f87171);
             color: #fff;
             box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
         }
-        
         .confirm-btn:active {
             transform: translateY(2px);
         }
-        
         /* Overlay untuk modal konfirmasi */
         .confirm-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 100dvh; /* Gunakan dvh untuk mobile */
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(4px);
             opacity: 0;
@@ -1277,11 +1223,135 @@
             transition: all 0.3s ease;
             z-index: 1001;
         }
-        
         .confirm-overlay.active {
             opacity: 1;
             visibility: visible;
         }
+        /* --- Modal Target Tambahan --- */
+        .modal-savings {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(180deg, #1a1f35 0%, #0a0e1a 100%);
+            border-radius: 32px 32px 0 0;
+            padding: 32px 24px 24px;
+            transition: bottom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 1001;
+            box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(96, 165, 250, 0.1);
+            border-bottom: none;
+        }
+        .modal-savings.active {
+            bottom: 0;
+        }
+        .modal-savings .form-group {
+            margin-bottom: 20px; /* Jarak antar input */
+        }
+        .modal-savings .input-wrapper {
+            position: relative;
+        }
+        .modal-savings .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 16px;
+        }
+        .modal-savings input, .modal-savings textarea {
+            width: 100%;
+            padding: 14px 18px 14px 50px;
+            border-radius: 16px;
+            border: 1.5px solid rgba(96, 165, 250, 0.2);
+            background: rgba(10, 14, 26, 0.8);
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .modal-savings textarea {
+            padding: 14px 18px 14px 50px;
+            min-height: 80px;
+            resize: vertical;
+        }
+        .modal-savings input:focus, .modal-savings textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: rgba(10, 14, 26, 0.95);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        .modal-savings input::placeholder, .modal-savings textarea::placeholder {
+            color: #475569;
+        }
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .file-input-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-radius: 16px;
+            border: 1.5px dashed rgba(96, 165, 250, 0.3);
+            background: rgba(10, 14, 26, 0.5);
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .file-input-button:hover, .file-input-button:focus {
+            background: rgba(10, 14, 26, 0.7);
+            border-color: rgba(96, 165, 250, 0.4);
+        }
+        .file-input-hidden {
+            position: absolute;
+            left: -9999px;
+        }
+        .image-preview-container {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .image-preview-label {
+            display: block;
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+        .image-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 2px solid rgba(96, 165, 250, 0.2);
+            display: none; /* Sembunyikan awalnya */
+        }
+        .btn-secondary-modal {
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1.5px solid rgba(59, 130, 246, 0.25);
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn-secondary-modal:active {
+            transform: translateY(-2px); /* Arah ke atas saat aktif */
+            background: rgba(59, 130, 246, 0.15);
+        }
+        /* --- End of Additional CSS --- */
     </style>
 </head>
 <body>
@@ -1302,7 +1372,6 @@
             </div>
         </div>
     </div>
-
     <!-- Setup Screen -->
     <div id="setup">
         <div class="setup-card">
@@ -1335,7 +1404,6 @@
             </form>
         </div>
     </div>
-
     <!-- Main App -->
     <div id="app">
         <!-- Header -->
@@ -1351,7 +1419,6 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-
         <!-- Balance Section -->
         <div class="balance-section">
             <div class="balance-card">
@@ -1359,7 +1426,6 @@
                 <div class="balance-amount" id="totalBalance">Rp 0</div>
             </div>
         </div>
-
         <!-- Action Buttons -->
         <div class="actions">
             <button class="action-btn btn-add" onclick="openModal('add')">
@@ -1371,7 +1437,6 @@
                 <span>Kurang</span>
             </button>
         </div>
-
         <!-- Transactions -->
         <div class="transactions">
             <div class="section-header">
@@ -1387,11 +1452,28 @@
                 </div>
             </div>
         </div>
+        <!-- Savings Targets Section -->
+        <div class="savings-targets">
+            <div class="section-header">
+                <h3 class="section-title">Target Tabungan</h3>
+                <button class="btn-secondary" onclick="openSavingsModal()">
+                    <i class="fas fa-plus"></i>
+                    <span>Tambah</span>
+                </button>
+            </div>
+            <div class="target-list" id="targetList">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <p>Belum ada target tabungan</p>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- Sidebar -->
-    <div class="overlay" onclick="closeAll()"></div>
-    <div class="sidebar">
+    <div class="overlay" id="overlay" onclick="closeAll()"></div>
+    <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h2 class="sidebar-title">
                 <i class="fas fa-chart-line"></i>
@@ -1401,7 +1483,6 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-
         <div class="sidebar-content">
             <div class="stats-section">
                 <div class="section-label">Ringkasan</div>
@@ -1436,8 +1517,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Chart Section -->
             <div class="chart-section">
                 <div class="section-label">Grafik Keuangan</div>
                 <div class="chart-container">
@@ -1454,8 +1533,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Device Info Section -->
             <div class="settings-section">
                 <div class="section-label">Informasi Perangkat</div>
                 <div class="settings-group">
@@ -1477,8 +1554,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Settings Section -->
             <div class="settings-section">
                 <div class="section-label">Pengaturan</div>
                 <button class="settings-btn btn-secondary" onclick="openSetBalanceModal()">
@@ -1490,15 +1565,12 @@
                     <span>Keluar</span>
                 </button>
             </div>
-            
-            <!-- Credits Section -->
             <div class="credits-section">
                 <div class="credits-text">Dibuat oleh</div>
                 <div class="credits-author">Danishtzy24</div>
             </div>
         </div>
     </div>
-
     <!-- Transaction Modal -->
     <div class="modal" id="transactionModal">
         <div class="modal-handle"></div>
@@ -1530,7 +1602,6 @@
             </button>
         </form>
     </div>
-
     <!-- Set Balance Modal -->
     <div class="modal" id="setBalanceModal">
         <div class="modal-handle"></div>
@@ -1555,15 +1626,64 @@
             </button>
         </form>
     </div>
-
+    <!-- Savings Target Modal -->
+    <div class="modal modal-savings" id="savingsModal">
+        <div class="modal-handle"></div>
+        <div class="modal-header">
+            <div class="modal-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+                <i class="fas fa-piggy-bank"></i>
+            </div>
+            <h3 class="modal-title" id="savingsModalTitle">Tambah Target</h3>
+            <p class="modal-subtitle">Atur tujuan tabunganmu</p>
+        </div>
+        <form id="savingsForm">
+            <div class="form-group">
+                <label>Nominal Target (Rp)</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-tag input-icon"></i>
+                    <input type="text" id="targetAmount" placeholder="0" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Keterangan Beli</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-shopping-cart input-icon"></i>
+                    <input type="text" id="targetDescription" placeholder="Mau beli apa?" required>
+                </div>
+            </div>
+            <!-- Field "Uang Saat Ini" dihapus dari form -->
+            <div class="form-group">
+                <label>Upload Foto Barang</label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="targetImage" class="file-input-hidden" accept="image/*">
+                    <label for="targetImage" class="file-input-button">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Pilih Gambar</span>
+                    </label>
+                </div>
+            </div>
+            <div class="image-preview-container">
+                <div class="image-preview-label">Pratinjau Gambar (1:1)</div>
+                <img id="imagePreview" class="image-preview" src="" alt="Pratinjau">
+            </div>
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-save"></i>
+                <span id="savingsSubmitBtnText">Simpan Target</span>
+            </button>
+            <button type="button" class="btn-secondary-modal" onclick="closeSavingsModal()">
+                <i class="fas fa-times"></i>
+                <span>Batal</span>
+            </button>
+        </form>
+    </div>
     <!-- Delete Confirmation Modal -->
     <div class="confirm-overlay" id="confirmOverlay"></div>
     <div class="confirm-modal" id="deleteConfirmModal">
         <div class="confirm-icon">
             <i class="fas fa-exclamation-triangle"></i>
         </div>
-        <h3 class="confirm-title">Hapus Transaksi</h3>
-        <p class="confirm-message" id="confirmMessage">Apakah Anda yakin ingin menghapus transaksi ini?</p>
+        <h3 class="confirm-title">Hapus Item</h3>
+        <p class="confirm-message" id="confirmMessage">Apakah Anda yakin ingin menghapus item ini?</p>
         <div class="confirm-actions">
             <button class="confirm-btn cancel" onclick="closeConfirmModal()">
                 <i class="fas fa-times"></i>
@@ -1575,7 +1695,6 @@
             </button>
         </div>
     </div>
-
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <div class="toast-icon">
@@ -1583,651 +1702,822 @@
         </div>
         <div class="toast-message">Transaksi berhasil disimpan</div>
     </div>
-
     <script>
         // Data aplikasi
-        let balance = 0;
-        let transactions = [];
-        let userName = '';
-        let currentAction = 'add';
-        let financeChart = null;
-        let isFirstTime = true;
-        let transactionToDelete = null;
+// Data aplikasi
+let balance = 0;
+let transactions = [];
+let userName = '';
+let currentAction = 'add';
+let financeChart = null;
+let isFirstTime = true;
+let transactionToDelete = null;
+let currentTargetToDelete = null; // Untuk target
+let currentTargetToEdit = null; // Untuk target
 
-        // Fungsi untuk menyimpan data ke localStorage
-        function saveData() {
-            const data = {
-                userName: userName,
-                balance: balance,
-                transactions: transactions,
-                isFirstTime: isFirstTime
-            };
-            localStorage.setItem('tabungankuData', JSON.stringify(data));
+// --- Data Tambahan untuk Target ---
+let savingsTargets = [];
+
+// Fungsi untuk menyimpan data ke localStorage
+function saveData() {
+    const data = {
+        userName: userName,
+        balance: balance,
+        transactions: transactions,
+        savingsTargets: savingsTargets, // Tambahkan ini
+        isFirstTime: isFirstTime
+    };
+    localStorage.setItem('tabungankuData', JSON.stringify(data));
+}
+
+// Fungsi untuk memuat data dari localStorage
+function loadData() {
+    const savedData = localStorage.getItem('tabungankuData');
+    if (savedData) {
+        const data = JSON.parse(savedData);
+        userName = data.userName || '';
+        balance = data.balance || 0;
+        transactions = data.transactions || [];
+        savingsTargets = data.savingsTargets || []; // Tambahkan ini
+        isFirstTime = data.isFirstTime !== false;
+        return true;
+    }
+    isFirstTime = true;
+    return false;
+}
+
+// Format number dengan pemisah ribuan
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+// Parse number dari string yang diformat
+function parseFormattedNumber(str) {
+    return parseFloat(str.replace(/\./g, '')) || 0;
+}
+
+// Format Rupiah dengan pemisah ribuan
+function formatRupiah(amount) {
+    const formatted = Math.abs(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return 'Rp ' + formatted;
+}
+
+// Auto format input dengan titik
+function formatInputWithDots(input) {
+    input.addEventListener('input', function(e) {
+        let value = this.value.replace(/\./g, '');
+        if (value === '') {
+            this.value = '';
+            return;
         }
-
-        // Fungsi untuk memuat data dari localStorage
-        function loadData() {
-            const savedData = localStorage.getItem('tabungankuData');
-            if (savedData) {
-                const data = JSON.parse(savedData);
-                userName = data.userName || '';
-                balance = data.balance || 0;
-                transactions = data.transactions || [];
-                isFirstTime = data.isFirstTime !== false;
-                return true;
-            }
-            isFirstTime = true;
-            return false;
+        if (!isNaN(value)) {
+            this.value = formatNumber(value);
+        } else {
+            this.value = this.value.slice(0, -1);
         }
+    });
+}
 
-        // Format number dengan pemisah ribuan
-        function formatNumber(num) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
+// Tampilkan toast notification
+function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    const toastIcon = toast.querySelector('.toast-icon i');
+    const toastMessage = toast.querySelector('.toast-message');
+    toast.className = `toast ${type}`;
+    toastMessage.textContent = message;
+    // Ganti ikon berdasarkan tipe toast
+    if (type === 'success') {
+        toastIcon.className = 'fas fa-check';
+    } else if (type === 'error') {
+        toastIcon.className = 'fas fa-exclamation-triangle';
+    } else if (type === 'info') {
+        toastIcon.className = 'fas fa-info-circle';
+    }
+    toast.classList.add('show');
+    // Sembunyikan toast setelah 3 detik
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
 
-        // Parse number dari string yang diformat
-        function parseFormattedNumber(str) {
-            return parseFloat(str.replace(/\./g, '')) || 0;
-        }
+// Buat efek partikel
+function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const particleCount = 30;
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        // Posisi acak
+        const left = Math.random() * 100;
+        const delay = Math.random() * 2;
+        const duration = 2 + Math.random() * 2;
+        particle.style.left = `${left}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        container.appendChild(particle);
+    }
+}
 
-        // Format Rupiah dengan pemisah ribuan
-        function formatRupiah(amount) {
-            const formatted = Math.abs(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-            return 'Rp ' + formatted;
-        }
-
-        // Auto format input dengan titik
-        function formatInputWithDots(input) {
-            input.addEventListener('input', function(e) {
-                let value = this.value.replace(/\./g, '');
-                if (value === '') {
-                    this.value = '';
-                    return;
-                }
-                if (!isNaN(value)) {
-                    this.value = formatNumber(value);
-                } else {
-                    this.value = this.value.slice(0, -1);
-                }
-            });
-        }
-
-        // Tampilkan toast notification
-        function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            const toastIcon = toast.querySelector('.toast-icon i');
-            const toastMessage = toast.querySelector('.toast-message');
-            
-            toast.className = `toast ${type}`;
-            toastMessage.textContent = message;
-            
-            // Ganti ikon berdasarkan tipe toast
-            if (type === 'success') {
-                toastIcon.className = 'fas fa-check';
-            } else if (type === 'error') {
-                toastIcon.className = 'fas fa-exclamation-triangle';
-            } else if (type === 'info') {
-                toastIcon.className = 'fas fa-info-circle';
-            }
-            
-            toast.classList.add('show');
-            
-            // Sembunyikan toast setelah 3 detik
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // Buat efek partikel
-        function createParticles() {
-            const container = document.getElementById('particlesContainer');
-            const particleCount = 30;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Posisi acak
-                const left = Math.random() * 100;
-                const delay = Math.random() * 2;
-                const duration = 2 + Math.random() * 2;
-                
-                particle.style.left = `${left}%`;
-                particle.style.animationDelay = `${delay}s`;
-                particle.style.animationDuration = `${duration}s`;
-                
-                container.appendChild(particle);
-            }
-        }
-
-        // Dapatkan informasi perangkat
-        function getDeviceInfo() {
-            const userAgent = navigator.userAgent;
-            let os = 'Unknown OS';
-            let cpuCores = navigator.hardwareConcurrency || 0;
-            let cpu = '';
-            let gpu = 'Unknown';
-            let browser = 'Unknown Browser';
-            
-            // Deteksi OS
-            if (userAgent.indexOf('Win') !== -1) os = 'Windows';
-            if (userAgent.indexOf('Mac') !== -1) os = 'MacOS';
-            if (userAgent.indexOf('X11') !== -1) os = 'UNIX';
-            if (userAgent.indexOf('Linux') !== -1) os = 'Linux';
-            if (userAgent.indexOf('Android') !== -1) os = 'Android';
-            if (userAgent.indexOf('iOS') !== -1) os = 'iOS';
-            
-            // Deteksi browser
-            if (userAgent.indexOf('Chrome') !== -1) browser = 'Chrome';
-            if (userAgent.indexOf('Firefox') !== -1) browser = 'Firefox';
-            if (userAgent.indexOf('Safari') !== -1) browser = 'Safari';
-            if (userAgent.indexOf('Edg') !== -1) browser = 'Edge';
-            if (userAgent.indexOf('OPR') !== -1) browser = 'Opera';
-            
-            // Logika CPU: jika 4 core, tampilkan 2 core (karena website hanya menghitung threads)
-            if (cpuCores > 0) {
-                // Asumsi: core fisik = threads / 2 (untuk hyperthreading)
-                let physicalCores = Math.floor(cpuCores / 2);
-                if (physicalCores < 1) physicalCores = 1;
-                cpu = `${physicalCores} core`;
-            } else {
-                cpu = 'Unknown';
-            }
-            
-            // Coba dapatkan info GPU
-            try {
-                const canvas = document.createElement('canvas');
-                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-                if (gl) {
-                    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-                    if (debugInfo) {
-                        gpu = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || 'Unknown';
-                        // Ambil nama singkat GPU (kata pertama)
-                        gpu = gpu.split(' ')[0];
-                    }
-                }
-            } catch (e) {
-                console.log('Tidak dapat mengakses info GPU');
-            }
-            
-            return { os, cpu, gpu, browser };
-        }
-
-        // Tampilkan informasi perangkat
-        function displayDeviceInfo() {
-            const deviceInfo = getDeviceInfo();
-            document.getElementById('deviceOS').textContent = deviceInfo.os;
-            document.getElementById('deviceCPU').textContent = deviceInfo.cpu;
-            document.getElementById('deviceGPU').textContent = deviceInfo.gpu;
-            document.getElementById('deviceBrowser').textContent = deviceInfo.browser;
-        }
-
-        // Inisialisasi aplikasi
-        function initApp() {
-            const initials = userName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
-            document.getElementById('profileAvatar').textContent = initials;
-            document.getElementById('profileName').textContent = userName;
-            
-            updateDisplay();
-            
-            // Tampilkan toast selamat datang jika pertama kali
-            if (isFirstTime) {
-                setTimeout(() => {
-                    showToast(`Selamat datang, ${userName}!`, 'info');
-                }, 1000);
-                isFirstTime = false;
-                saveData();
+// Dapatkan informasi perangkat
+function getDeviceInfo() {
+    const userAgent = navigator.userAgent;
+    let os = 'Unknown OS';
+    let cpuCores = navigator.hardwareConcurrency || 0;
+    let cpu = '';
+    let gpu = 'Unknown';
+    let browser = 'Unknown Browser';
+    // Deteksi OS
+    if (userAgent.indexOf('Win') !== -1) os = 'Windows';
+    if (userAgent.indexOf('Mac') !== -1) os = 'MacOS';
+    if (userAgent.indexOf('X11') !== -1) os = 'UNIX';
+    if (userAgent.indexOf('Linux') !== -1) os = 'Linux';
+    if (userAgent.indexOf('Android') !== -1) os = 'Android';
+    if (userAgent.indexOf('iOS') !== -1) os = 'iOS';
+    // Deteksi browser
+    if (userAgent.indexOf('Chrome') !== -1) browser = 'Chrome';
+    if (userAgent.indexOf('Firefox') !== -1) browser = 'Firefox';
+    if (userAgent.indexOf('Safari') !== -1) browser = 'Safari';
+    if (userAgent.indexOf('Edg') !== -1) browser = 'Edge';
+    if (userAgent.indexOf('OPR') !== -1) browser = 'Opera';
+    // Logika CPU: jika 4 core, tampilkan 2 core (karena website hanya menghitung threads)
+    if (cpuCores > 0) {
+        // Asumsi: core fisik = threads / 2 (untuk hyperthreading)
+        let physicalCores = Math.floor(cpuCores / 2);
+        if (physicalCores < 1) physicalCores = 1;
+        cpu = `${physicalCores} core`;
+    } else {
+        cpu = 'Unknown';
+    }
+    // Coba dapatkan info GPU
+    try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (gl) {
+            const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+            if (debugInfo) {
+                gpu = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || 'Unknown';
+                // Ambil nama singkat GPU (kata pertama)
+                gpu = gpu.split(' ')[0];
             }
         }
+    } catch (e) {
+        console.log('Tidak dapat mengakses info GPU');
+    }
+    return { os, cpu, gpu, browser };
+}
 
-        // Perbarui tampilan
-        function updateDisplay() {
-            const balanceElement = document.getElementById('totalBalance');
-            balanceElement.textContent = formatRupiah(balance);
-            
-            // Tambahkan kelas jika saldo negatif
-            if (balance < 0) {
-                balanceElement.classList.add('balance-negative');
-            } else {
-                balanceElement.classList.remove('balance-negative');
-            }
-            
-            const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
-            const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
-            const avgAmount = transactions.length > 0 ? (income + expense) / transactions.length : 0;
-            
-            document.getElementById('totalIncome').textContent = formatRupiah(income);
-            document.getElementById('totalExpense').textContent = formatRupiah(expense);
-            document.getElementById('totalTransactions').textContent = transactions.length;
-            document.getElementById('avgTransaction').textContent = formatRupiah(avgAmount);
-            document.getElementById('transactionCount').textContent = transactions.length + ' Transaksi';
-            
-            // Perbarui grafik jika ada
-            if (financeChart) {
-                updateChart();
-            }
-            
-            const listEl = document.getElementById('transactionList');
-            if (transactions.length === 0) {
-                listEl.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-icon">
-                            <i class="fas fa-receipt"></i>
-                        </div>
-                        <p>Belum ada transaksi</p>
+// Tampilkan informasi perangkat
+function displayDeviceInfo() {
+    const deviceInfo = getDeviceInfo();
+    document.getElementById('deviceOS').textContent = deviceInfo.os;
+    document.getElementById('deviceCPU').textContent = deviceInfo.cpu;
+    document.getElementById('deviceGPU').textContent = deviceInfo.gpu;
+    document.getElementById('deviceBrowser').textContent = deviceInfo.browser;
+}
+
+// Inisialisasi aplikasi
+function initApp() {
+    const initials = userName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+    document.getElementById('profileAvatar').textContent = initials;
+    document.getElementById('profileName').textContent = userName;
+    updateDisplay();
+    // Tampilkan toast selamat datang jika pertama kali
+    if (isFirstTime) {
+        setTimeout(() => {
+            showToast(`Selamat datang, ${userName}!`, 'info');
+        }, 1000);
+        isFirstTime = false;
+        saveData();
+    }
+}
+
+// Perbarui tampilan
+function updateDisplay() {
+    const balanceElement = document.getElementById('totalBalance');
+    balanceElement.textContent = formatRupiah(balance);
+    // Tambahkan kelas jika saldo negatif
+    if (balance < 0) {
+        balanceElement.classList.add('balance-negative');
+    } else {
+        balanceElement.classList.remove('balance-negative');
+    }
+    const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
+    const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
+    const avgAmount = transactions.length > 0 ? (income + expense) / transactions.length : 0;
+    document.getElementById('totalIncome').textContent = formatRupiah(income);
+    document.getElementById('totalExpense').textContent = formatRupiah(expense);
+    document.getElementById('totalTransactions').textContent = transactions.length;
+    document.getElementById('avgTransaction').textContent = formatRupiah(avgAmount);
+    document.getElementById('transactionCount').textContent = transactions.length + ' Transaksi';
+    // Perbarui grafik jika ada
+    if (financeChart) {
+        updateChart();
+    }
+
+    // Perbarui daftar transaksi dengan fragment
+    const listEl = document.getElementById('transactionList');
+    const fragment = document.createDocumentFragment();
+    if (transactions.length === 0) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'empty-state';
+        emptyState.innerHTML = `
+            <div class="empty-icon">
+                <i class="fas fa-receipt"></i>
+            </div>
+            <p>Belum ada transaksi</p>
+        `;
+        fragment.appendChild(emptyState);
+    } else {
+        // Gunakan loop terbalik untuk menampilkan transaksi terbaru di atas
+        for (let i = transactions.length - 1; i >= 0; i--) {
+            const t = transactions[i];
+            const transactionItem = document.createElement('div');
+            transactionItem.className = `transaction-item type-${t.type}`;
+            transactionItem.innerHTML = `
+                <div class="transaction-main">
+                    <div class="transaction-icon ${t.type === 'add' ? 'icon-add' : 'icon-subtract'}">
+                        <i class="fas fa-${t.type === 'add' ? 'arrow-up' : 'arrow-down'}"></i>
                     </div>
-                `;
-            } else {
-                listEl.innerHTML = transactions.map((t, index) => `
-                    <div class="transaction-item type-${t.type}">
-                        <div class="transaction-main">
-                            <div class="transaction-icon ${t.type === 'add' ? 'icon-add' : 'icon-subtract'}">
-                                <i class="fas fa-${t.type === 'add' ? 'arrow-up' : 'arrow-down'}"></i>
-                            </div>
-                            <div class="transaction-info">
-                                <div class="transaction-desc">${t.description}</div>
-                                <div class="transaction-date">${t.date}</div>
-                            </div>
-                        </div>
-                        <div class="transaction-right">
-                            <div class="transaction-amount ${t.type === 'add' ? 'amount-positive' : 'amount-negative'}">
-                                ${t.type === 'add' ? '+' : '−'}${formatRupiah(t.amount)}
-                            </div>
-                            <button class="delete-btn" onclick="openDeleteConfirm(${index})">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
+                    <div class="transaction-info">
+                        <div class="transaction-desc">${t.description}</div>
+                        <div class="transaction-date">${t.date}</div>
                     </div>
-                `).reverse().join('');
-            }
-            
-            // Simpan data ke localStorage
-            saveData();
+                </div>
+                <div class="transaction-right">
+                    <div class="transaction-amount ${t.type === 'add' ? 'amount-positive' : 'amount-negative'}">
+                        ${t.type === 'add' ? '+' : '−'}${formatRupiah(t.amount)}
+                    </div>
+                    <button class="delete-btn" onclick="openDeleteConfirm(${i})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            fragment.appendChild(transactionItem);
         }
+    }
+    listEl.innerHTML = '';
+    listEl.appendChild(fragment);
 
-        // Buka modal konfirmasi hapus
-        function openDeleteConfirm(index) {
-            transactionToDelete = index;
-            const actualIndex = transactions.length - 1 - index;
-            const transaction = transactions[actualIndex];
-            
-            document.getElementById('confirmMessage').textContent = 
-                `Apakah Anda yakin ingin menghapus transaksi "${transaction.description}"?`;
-            
-            document.getElementById('deleteConfirmModal').classList.add('active');
-            document.getElementById('confirmOverlay').classList.add('active');
+    updateSavingsDisplay(); // Panggil fungsi baru
+    // Simpan data ke localStorage
+    saveData();
+}
+
+// --- Fungsi Baru untuk Target Tabungan ---
+function updateSavingsDisplay() {
+    const listEl = document.getElementById('targetList');
+    const fragment = document.createDocumentFragment();
+    if (savingsTargets.length === 0) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'empty-state';
+        emptyState.innerHTML = `
+            <div class="empty-icon">
+                <i class="fas fa-piggy-bank"></i>
+            </div>
+            <p>Belum ada target tabungan</p>
+        `;
+        fragment.appendChild(emptyState);
+    } else {
+        for (let i = 0; i < savingsTargets.length; i++) {
+            const target = savingsTargets[i];
+            // Ambil uang saat ini dari saldo global
+            const currentAmount = balance;
+            const progressPercent = target.targetAmount > 0 ? Math.min(100, (currentAmount / target.targetAmount) * 100) : 0;
+
+            const targetItem = document.createElement('div');
+            targetItem.className = 'target-item';
+            targetItem.innerHTML = `
+                <div class="target-header">
+                    <div class="target-desc">${target.description}</div>
+                    <div class="target-actions">
+                        <button class="target-action-btn target-edit-btn" onclick="openSavingsModal(${i})">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="target-action-btn target-delete-btn" onclick="openSavingsDeleteConfirm(${i})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="target-amounts">
+                    <span>${formatRupiah(currentAmount)}</span>
+                    <span>${formatRupiah(target.targetAmount)}</span>
+                </div>
+                <div class="target-progress-container">
+                    <div class="target-progress-bar" style="width: ${progressPercent}%"></div>
+                </div>
+                ${target.image ? `<img src="${target.image}" class="target-image-preview" alt="Target Image">` : ''}
+            `;
+            fragment.appendChild(targetItem);
         }
+    }
+    listEl.innerHTML = '';
+    listEl.appendChild(fragment);
+}
 
-        // Tutup modal konfirmasi hapus
-        function closeConfirmModal() {
-            document.getElementById('deleteConfirmModal').classList.remove('active');
-            document.getElementById('confirmOverlay').classList.remove('active');
-            transactionToDelete = null;
+function openSavingsModal(index = null) {
+    const modal = document.getElementById('savingsModal');
+    const title = document.getElementById('savingsModalTitle');
+    const submitBtnText = document.getElementById('savingsSubmitBtnText');
+    const form = document.getElementById('savingsForm');
+
+    if (index !== null) {
+        // Mode Edit
+        const target = savingsTargets[index];
+        currentTargetToEdit = index;
+        title.textContent = 'Edit Target';
+        submitBtnText.textContent = 'Perbarui Target';
+        document.getElementById('targetAmount').value = formatNumber(target.targetAmount);
+        document.getElementById('targetDescription').value = target.description;
+        // Tidak perlu mengisi "uang saat ini"
+        if (target.image) {
+            document.getElementById('imagePreview').src = target.image;
+            document.getElementById('imagePreview').style.display = 'block';
+        } else {
+            document.getElementById('imagePreview').style.display = 'none';
         }
+    } else {
+        // Mode Tambah
+        currentTargetToEdit = null;
+        title.textContent = 'Tambah Target';
+        submitBtnText.textContent = 'Simpan Target';
+        form.reset();
+        document.getElementById('imagePreview').style.display = 'none';
+    }
+    modal.classList.add('active');
+    document.getElementById('overlay').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('targetAmount').focus();
+    }, 400);
+}
 
-        // Hapus transaksi
-        function deleteTransaction() {
-            if (transactionToDelete === null) return;
-            
-            const actualIndex = transactions.length - 1 - transactionToDelete;
-            const transaction = transactions[actualIndex];
-            
-            if (transaction.type === 'add') {
-                balance -= transaction.amount;
-            } else {
-                balance += transaction.amount;
-            }
-            
-            transactions.splice(actualIndex, 1);
-            updateDisplay();
-            closeConfirmModal();
-            showToast('Transaksi berhasil dihapus', 'success');
+function closeSavingsModal() {
+    document.getElementById('savingsModal').classList.remove('active');
+    if (!document.getElementById('sidebar').classList.contains('active')) {
+        document.getElementById('overlay').classList.remove('active');
+    }
+    // Reset preview saat modal ditutup
+    document.getElementById('imagePreview').style.display = 'none';
+}
+
+function openSavingsDeleteConfirm(index) {
+    currentTargetToDelete = index;
+    const target = savingsTargets[index];
+    document.getElementById('confirmMessage').textContent = 
+        `Apakah Anda yakin ingin menghapus target "${target.description}"?`;
+    document.getElementById('deleteConfirmModal').classList.add('active');
+    document.getElementById('confirmOverlay').classList.add('active');
+}
+
+function deleteSavingsTarget() {
+    if (currentTargetToDelete === null) return;
+    savingsTargets.splice(currentTargetToDelete, 1);
+    updateSavingsDisplay();
+    closeConfirmModal();
+    showToast('Target berhasil dihapus', 'success');
+}
+
+function handleImageUpload() {
+    const input = document.getElementById('targetImage');
+    const preview = document.getElementById('imagePreview');
+    const file = input.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    } else {
+        preview.style.display = 'none';
+    }
+}
+
+// --- Event Listeners Tambahan untuk Target ---
+document.getElementById('targetImage').addEventListener('change', handleImageUpload);
+
+document.getElementById('savingsForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const targetAmount = parseFormattedNumber(document.getElementById('targetAmount').value);
+    const description = document.getElementById('targetDescription').value.trim();
+    // Ambil uang saat ini dari saldo global
+    const currentAmount = balance;
+    const imageInput = document.getElementById('targetImage');
+    let imageData = null;
+
+    if (imageInput.files && imageInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            imageData = event.target.result;
+            saveSavingsTargetData(targetAmount, description, currentAmount, imageData);
+        };
+        reader.readAsDataURL(imageInput.files[0]);
+    } else {
+        // Jika tidak ada gambar baru diunggah, gunakan gambar lama jika dalam mode edit
+        if (currentTargetToEdit !== null) {
+            imageData = savingsTargets[currentTargetToEdit].image;
         }
+        saveSavingsTargetData(targetAmount, description, currentAmount, imageData);
+    }
+});
 
-        // Toggle sidebar
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('active');
-            document.querySelector('.overlay').classList.toggle('active');
-            
-            if (sidebar.classList.contains('active') && !financeChart) {
-                // Tunggu sebentar agar animasi sidebar selesai
-                setTimeout(() => {
-                    initChart();
-                    displayDeviceInfo();
-                }, 300);
-            }
-        }
+function saveSavingsTargetData(targetAmount, description, currentAmount, imageData) {
+    if (targetAmount <= 0) {
+        showToast('Nominal target harus lebih dari 0', 'error');
+        return;
+    }
+    if (description === '') {
+        showToast('Keterangan harus diisi', 'error');
+        return;
+    }
+    if (currentTargetToEdit !== null) {
+        // Update existing target
+        savingsTargets[currentTargetToEdit] = {
+            ...savingsTargets[currentTargetToEdit],
+            targetAmount: targetAmount,
+            description: description,
+            // currentAmount tidak disimpan, diambil dari global balance
+            image: imageData
+        };
+        showToast('Target berhasil diperbarui', 'success');
+    } else {
+        // Add new target
+        savingsTargets.push({
+            targetAmount: targetAmount,
+            description: description,
+            // currentAmount tidak disimpan, diambil dari global balance
+            image: imageData
+        });
+        showToast('Target berhasil ditambahkan', 'success');
+    }
+    updateSavingsDisplay();
+    closeSavingsModal();
+}
 
-        // Inisialisasi grafik
-        function initChart() {
-            const ctx = document.getElementById('financeChart').getContext('2d');
-            
-            // Hitung pemasukan dan pengeluaran
-            const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
-            const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
-            
-            financeChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Pemasukan', 'Pengeluaran'],
-                    datasets: [{
-                        data: [income, expense],
-                        backgroundColor: [
-                            '#10b981',
-                            '#ef4444'
-                        ],
-                        borderColor: [
-                            '#10b981',
-                            '#ef4444'
-                        ],
-                        borderWidth: 2,
-                        borderRadius: 8,
-                        hoverOffset: 12
-                    }]
+// --- Fungsi-fungsi utama lainnya ---
+// Buka modal konfirmasi hapus (transaksi)
+function openDeleteConfirm(index) {
+    transactionToDelete = index;
+    const actualIndex = transactions.length - 1 - index;
+    const transaction = transactions[actualIndex];
+    document.getElementById('confirmMessage').textContent = 
+        `Apakah Anda yakin ingin menghapus transaksi "${transaction.description}"?`;
+    document.getElementById('deleteConfirmModal').classList.add('active');
+    document.getElementById('confirmOverlay').classList.add('active');
+}
+
+// Tutup modal konfirmasi hapus
+function closeConfirmModal() {
+    document.getElementById('deleteConfirmModal').classList.remove('active');
+    document.getElementById('confirmOverlay').classList.remove('active');
+    transactionToDelete = null;
+    currentTargetToDelete = null; // Reset juga untuk target
+}
+
+// Hapus transaksi
+function deleteTransaction() {
+    if (transactionToDelete === null) return;
+    const actualIndex = transactions.length - 1 - transactionToDelete;
+    const transaction = transactions[actualIndex];
+    if (transaction.type === 'add') {
+        balance -= transaction.amount;
+    } else {
+        balance += transaction.amount;
+    }
+    transactions.splice(actualIndex, 1);
+    updateDisplay(); // updateDisplay() akan memanggil updateSavingsDisplay()
+    closeConfirmModal();
+    showToast('Transaksi berhasil dihapus', 'success');
+}
+
+// Toggle sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+    document.getElementById('overlay').classList.toggle('active');
+    if (sidebar.classList.contains('active') && !financeChart) {
+        // Tunggu sebentar agar animasi sidebar selesai
+        setTimeout(() => {
+            initChart();
+            displayDeviceInfo();
+        }, 300);
+    }
+}
+
+// Inisialisasi grafik - YANG SUDAH DIPERBAIKI
+function initChart() {
+    const ctx = document.getElementById('financeChart').getContext('2d');
+    // Hitung pemasukan dan pengeluaran
+    const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
+    const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
+    
+    financeChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Pemasukan', 'Pengeluaran'],
+            datasets: [{
+                data: [income, expense],
+                backgroundColor: [
+                    '#10b981',
+                    '#ef4444'
+                ],
+                borderColor: [
+                    '#10b981',
+                    '#ef4444'
+                ],
+                borderWidth: 2,
+                borderRadius: 8,
+                hoverOffset: 12
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
                 },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    const label = context.label || '';
-                                    const value = context.raw || 0;
-                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                                    const percentage = Math.round((value / total) * 100);
-                                    return `${label}: ${formatRupiah(value)} (${percentage}%)`;
-                                }
-                            },
-                            backgroundColor: 'rgba(26, 31, 53, 0.9)',
-                            titleColor: '#e2e8f0',
-                            bodyColor: '#94a3b8',
-                            borderColor: 'rgba(96, 165, 250, 0.2)',
-                            borderWidth: 1,
-                            cornerRadius: 12,
-                            displayColors: true,
-                            padding: 12
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const label = context.label || '';
+                            const value = context.raw || 0;
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = Math.round((value / total) * 100);
+                            return `${label}: ${formatRupiah(value)} (${percentage}%)`;
                         }
                     },
-                    cutout: '65%'
+                    backgroundColor: 'rgba(26, 31, 53, 0.9)',
+                    titleColor: '#e2e8f0',
+                    bodyColor: '#94a3b8',
+                    borderColor: 'rgba(96, 165, 250, 0.2)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    displayColors: true,
+                    padding: 12
                 }
-            });
+            },
+            cutout: '65%'
         }
+    });
+}
 
-        // Perbarui grafik
-        function updateChart() {
-            if (!financeChart) return;
-            
-            const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
-            const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
-            
-            financeChart.data.datasets[0].data = [income, expense];
-            financeChart.update();
-        }
+// Perbarui grafik
+function updateChart() {
+    if (!financeChart) return;
+    const income = transactions.filter(t => t.type === 'add').reduce((sum, t) => sum + t.amount, 0);
+    const expense = transactions.filter(t => t.type === 'subtract').reduce((sum, t) => sum + t.amount, 0);
+    financeChart.data.datasets[0].data = [income, expense];
+    financeChart.update();
+}
 
-        // Buka modal transaksi
-        function openModal(action) {
-            currentAction = action;
-            const modal = document.getElementById('transactionModal');
-            const modalIcon = document.getElementById('modalIcon');
-            const title = action === 'add' ? 'Tambah Uang' : 'Kurangi Uang';
-            
-            document.getElementById('modalTitle').textContent = title;
-            
-            if (action === 'add') {
-                modalIcon.className = 'modal-icon modal-icon-add';
-                modalIcon.innerHTML = '<i class="fas fa-arrow-up"></i>';
-            } else {
-                modalIcon.className = 'modal-icon modal-icon-subtract';
-                modalIcon.innerHTML = '<i class="fas fa-arrow-down"></i>';
+// Buka modal transaksi
+function openModal(action) {
+    currentAction = action;
+    const modal = document.getElementById('transactionModal');
+    const modalIcon = document.getElementById('modalIcon');
+    const title = action === 'add' ? 'Tambah Uang' : 'Kurangi Uang';
+    document.getElementById('modalTitle').textContent = title;
+    if (action === 'add') {
+        modalIcon.className = 'modal-icon modal-icon-add';
+        modalIcon.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    } else {
+        modalIcon.className = 'modal-icon modal-icon-subtract';
+        modalIcon.innerHTML = '<i class="fas fa-arrow-down"></i>';
+    }
+    modal.classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+    document.getElementById('amount').value = '';
+    document.getElementById('description').value = '';
+    // Fokus ke input jumlah
+    setTimeout(() => {
+        document.getElementById('amount').focus();
+    }, 400);
+}
+
+// Buka modal atur saldo
+function openSetBalanceModal() {
+    const modal = document.getElementById('setBalanceModal');
+    document.getElementById('newBalance').value = formatNumber(balance);
+    modal.classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+    // Tutup sidebar
+    document.querySelector('.sidebar').classList.remove('active');
+    // Fokus ke input
+    setTimeout(() => {
+        document.getElementById('newBalance').focus();
+    }, 400);
+}
+
+// Tutup modal
+function closeModal() {
+    document.getElementById('transactionModal').classList.remove('active');
+    document.getElementById('setBalanceModal').classList.remove('active');
+    if (!document.querySelector('.sidebar').classList.contains('active')) {
+        document.querySelector('.overlay').classList.remove('active');
+    }
+}
+
+// Tutup semua (modal dan sidebar)
+function closeAll() {
+    closeModal();
+    closeSavingsModal(); // Panggil fungsi baru
+    closeConfirmModal();
+    if (document.querySelector('.sidebar').classList.contains('active')) {
+        toggleSidebar();
+    }
+}
+
+// Logout
+function logout() {
+    if (confirm('Apakah Anda yakin ingin keluar?')) {
+        localStorage.removeItem('tabungankuData');
+        document.getElementById('app').style.display = 'none';
+        document.getElementById('setup').style.display = 'flex';
+        document.querySelector('.sidebar').classList.remove('active');
+        document.querySelector('.overlay').classList.remove('active');
+        // Reset form setup
+        document.getElementById('userName').value = '';
+        document.getElementById('initialBalance').value = '0';
+    }
+}
+
+// Fungsi untuk menampilkan loading screen
+function showLoadingScreen() {
+    return new Promise((resolve) => {
+        // Tampilkan splash screen
+        document.getElementById('splash').style.display = 'flex';
+        document.getElementById('splash').style.animation = '';
+        // Buat efek partikel
+        createParticles();
+        // Progress bar loading - berjalan sampai penuh
+        let progress = 0;
+        const progressBar = document.getElementById('progressBar');
+        const progressInterval = setInterval(() => {
+            progress += 1;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                // Tunggu sebentar agar animasi progress selesai
+                setTimeout(() => {
+                    document.getElementById('splash').style.animation = 'fadeOut 0.6s ease forwards';
+                    setTimeout(() => {
+                        document.getElementById('splash').style.display = 'none';
+                        resolve();
+                    }, 600);
+                }, 500);
             }
-            
-            modal.classList.add('active');
-            document.querySelector('.overlay').classList.add('active');
-            
-            document.getElementById('amount').value = '';
-            document.getElementById('description').value = '';
-            
-            // Fokus ke input jumlah
-            setTimeout(() => {
-                document.getElementById('amount').focus();
-            }, 400);
-        }
+            progressBar.style.width = `${progress}%`;
+        }, 30);
+    });
+}
 
-        // Buka modal atur saldo
-        function openSetBalanceModal() {
-            const modal = document.getElementById('setBalanceModal');
-            document.getElementById('newBalance').value = formatNumber(balance);
-            modal.classList.add('active');
-            document.querySelector('.overlay').classList.add('active');
-            
-            // Tutup sidebar
-            document.querySelector('.sidebar').classList.remove('active');
-            
-            // Fokus ke input
-            setTimeout(() => {
-                document.getElementById('newBalance').focus();
-            }, 400);
+// Event listener saat halaman dimuat - DENGAN ERROR HANDLING
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        // Cek apakah data sudah ada di localStorage
+        const hasData = loadData();
+        // Tampilkan loading screen
+        await showLoadingScreen();
+        
+        if (hasData && userName) {
+            // Jika data ada, langsung ke aplikasi utama
+            document.getElementById('app').style.display = 'block';
+            initApp();
+        } else {
+            // Jika tidak, tampilkan setup
+            document.getElementById('setup').style.display = 'flex';
         }
-
-        // Tutup modal
-        function closeModal() {
-            document.getElementById('transactionModal').classList.remove('active');
-            document.getElementById('setBalanceModal').classList.remove('active');
-            if (!document.querySelector('.sidebar').classList.contains('active')) {
-                document.querySelector('.overlay').classList.remove('active');
-            }
-        }
-
-        // Tutup semua (modal dan sidebar)
-        function closeAll() {
-            closeModal();
-            closeConfirmModal();
-            if (document.querySelector('.sidebar').classList.contains('active')) {
-                toggleSidebar();
-            }
-        }
-
-        // Logout
-        function logout() {
-            if (confirm('Apakah Anda yakin ingin keluar?')) {
-                localStorage.removeItem('tabungankuData');
-                document.getElementById('app').style.display = 'none';
-                document.getElementById('setup').style.display = 'flex';
-                document.querySelector('.sidebar').classList.remove('active');
-                document.querySelector('.overlay').classList.remove('active');
-                
-                // Reset form setup
-                document.getElementById('userName').value = '';
-                document.getElementById('initialBalance').value = '0';
-            }
-        }
-
-        // Fungsi untuk menampilkan loading screen
-        function showLoadingScreen() {
-            return new Promise((resolve) => {
-                // Tampilkan splash screen
-                document.getElementById('splash').style.display = 'flex';
-                document.getElementById('splash').style.animation = '';
-                
-                // Buat efek partikel
-                createParticles();
-                
-                // Progress bar loading - berjalan sampai penuh
-                let progress = 0;
-                const progressBar = document.getElementById('progressBar');
-                const progressInterval = setInterval(() => {
-                    progress += 1;
-                    if (progress >= 100) {
-                        progress = 100;
-                        clearInterval(progressInterval);
-                        
-                        // Tunggu sebentar agar animasi progress selesai
-                        setTimeout(() => {
-                            document.getElementById('splash').style.animation = 'fadeOut 0.6s ease forwards';
-                            
-                            setTimeout(() => {
-                                document.getElementById('splash').style.display = 'none';
-                                resolve();
-                            }, 600);
-                        }, 500);
-                    }
-                    progressBar.style.width = `${progress}%`;
-                }, 30);
-            });
-        }
-
-        // Event listener saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Cek apakah data sudah ada di localStorage
-            const hasData = loadData();
-            
-            // Tampilkan loading screen
+        
+        // Terapkan format titik pada input saldo
+        const balanceInput = document.getElementById('initialBalance');
+        formatInputWithDots(balanceInput);
+        
+        // Setup form
+        document.getElementById('setupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            userName = document.getElementById('userName').value.trim();
+            balance = parseFormattedNumber(document.getElementById('initialBalance').value);
+            // Tampilkan loading screen lagi
             await showLoadingScreen();
-            
-            if (hasData && userName) {
-                // Jika data ada, langsung ke aplikasi utama
-                document.getElementById('app').style.display = 'block';
-                initApp();
+            document.getElementById('setup').style.display = 'none';
+            document.getElementById('app').style.display = 'block';
+            initApp();
+            showToast('Profil berhasil disimpan!', 'success');
+        });
+        
+        // Terapkan format titik pada input jumlah
+        const amountInput = document.getElementById('amount');
+        formatInputWithDots(amountInput);
+        
+        // Form transaksi
+        document.getElementById('transactionForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const amount = parseFormattedNumber(document.getElementById('amount').value);
+            const description = document.getElementById('description').value.trim();
+            if (amount <= 0) {
+                showToast('Jumlah harus lebih dari 0', 'error');
+                return;
+            }
+            if (currentAction === 'add') {
+                balance += amount;
             } else {
-                // Jika tidak, tampilkan setup
-                document.getElementById('setup').style.display = 'flex';
+                // Izinkan saldo minus
+                balance -= amount;
             }
-            
-            // Terapkan format titik pada input saldo
-            const balanceInput = document.getElementById('initialBalance');
-            formatInputWithDots(balanceInput);
-            
-            // Setup form
-            document.getElementById('setupForm').addEventListener('submit', async (e) => {
-                e.preventDefault();
-                userName = document.getElementById('userName').value.trim();
-                balance = parseFormattedNumber(document.getElementById('initialBalance').value);
-                
-                // Tampilkan loading screen lagi
-                await showLoadingScreen();
-                
-                document.getElementById('setup').style.display = 'none';
-                document.getElementById('app').style.display = 'block';
-                initApp();
-                showToast('Profil berhasil disimpan!', 'success');
+            const now = new Date();
+            transactions.push({
+                type: currentAction,
+                amount: amount,
+                description: description,
+                date: now.toLocaleString('id-ID', { 
+                    day: '2-digit', 
+                    month: 'short', 
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
             });
-            
-            // Terapkan format titik pada input jumlah
-            const amountInput = document.getElementById('amount');
-            formatInputWithDots(amountInput);
-            
-            // Form transaksi
-            document.getElementById('transactionForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const amount = parseFormattedNumber(document.getElementById('amount').value);
-                const description = document.getElementById('description').value.trim();
-                
-                if (amount <= 0) {
-                    showToast('Jumlah harus lebih dari 0', 'error');
-                    return;
-                }
-                
-                if (currentAction === 'add') {
-                    balance += amount;
-                } else {
-                    // Izinkan saldo minus
-                    balance -= amount;
-                }
-                
-                const now = new Date();
-                transactions.push({
-                    type: currentAction,
-                    amount: amount,
-                    description: description,
-                    date: now.toLocaleString('id-ID', { 
-                        day: '2-digit', 
-                        month: 'short', 
-                        year: 'numeric',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    })
-                });
-                
-                updateDisplay();
-                closeModal();
-                showToast(
-                    currentAction === 'add' 
-                        ? 'Pemasukan berhasil ditambahkan' 
-                        : 'Pengeluaran berhasil dicatat',
-                    'success'
-                );
-            });
-            
-            // Form atur saldo
-            document.getElementById('setBalanceForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const newBalance = parseFormattedNumber(document.getElementById('newBalance').value);
-                balance = newBalance;
-                
-                updateDisplay();
-                closeModal();
-                showToast('Saldo berhasil diatur ulang', 'success');
-            });
-            
-            // Terapkan format titik pada input saldo baru
-            const newBalanceInput = document.getElementById('newBalance');
-            formatInputWithDots(newBalanceInput);
-            
-            // Event listener untuk tombol hapus di modal konfirmasi
-            document.getElementById('confirmDeleteBtn').addEventListener('click', deleteTransaction);
-            
-            // Event listener untuk overlay konfirmasi hapus
-            document.getElementById('confirmOverlay').addEventListener('click', closeConfirmModal);
+            updateDisplay(); // updateDisplay() akan memanggil updateSavingsDisplay()
+            closeModal();
+            showToast(
+                currentAction === 'add' 
+                    ? 'Pemasukan berhasil ditambahkan' 
+                    : 'Pengeluaran berhasil dicatat',
+                'success'
+            );
         });
-
-        // Blokir klik kanan
-        document.addEventListener("contextmenu", e => e.preventDefault());
-
-        // Blokir kombinasi Ctrl, F12, dan Inspect Element
-        document.addEventListener("keydown", e => {
-            // Semua kombinasi Ctrl (Ctrl + apapun)
-            if (e.ctrlKey || e.metaKey) {
-                e.preventDefault();
-                return false;
-            }
-
-            // Blokir F12
-            if (e.key === "F12") {
-                e.preventDefault();
-                return false;
-            }
-
-            // Blokir Ctrl+Shift+I (Inspect)
-            if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "I") {
-                e.preventDefault();
-                return false;
-            }
-
-            // Blokir Ctrl+Shift+J (Console)
-            if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "J") {
-                e.preventDefault();
-                return false;
-            }
-
-            // Blokir Ctrl+Shift+C (Element picker)
-            if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "C") {
-                e.preventDefault();
-                return false;
-            }
-
-            // Blokir Ctrl+U (View Source)
-            if (e.ctrlKey && e.key.toUpperCase() === "U") {
-                e.preventDefault();
-                return false;
+        
+        // Form atur saldo
+        document.getElementById('setBalanceForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newBalance = parseFormattedNumber(document.getElementById('newBalance').value);
+            balance = newBalance;
+            updateDisplay(); // updateDisplay() akan memanggil updateSavingsDisplay()
+            closeModal();
+            showToast('Saldo berhasil diatur ulang', 'success');
+        });
+        
+        // Terapkan format titik pada input saldo baru
+        const newBalanceInput = document.getElementById('newBalance');
+        formatInputWithDots(newBalanceInput);
+        
+        // Event listener untuk tombol hapus di modal konfirmasi
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+            if (transactionToDelete !== null) {
+                deleteTransaction();
+            } else if (currentTargetToDelete !== null) {
+                deleteSavingsTarget(); // Panggil fungsi baru
             }
         });
+        
+        // Event listener untuk overlay konfirmasi hapus
+        document.getElementById('confirmOverlay').addEventListener('click', closeConfirmModal);
+        
+    } catch (error) {
+        console.error('Error initializing app:', error);
+        // Fallback: langsung tampilkan setup jika ada error
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('setup').style.display = 'flex';
+    }
+});
+
+// Blokir klik kanan
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Blokir kombinasi Ctrl, F12, dan Inspect Element
+document.addEventListener("keydown", e => {
+    // Semua kombinasi Ctrl (Ctrl + apapun)
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        return false;
+    }
+    // Blokir F12
+    if (e.key === "F12") {
+        e.preventDefault();
+        return false;
+    }
+    // Blokir Ctrl+Shift+I (Inspect)
+    if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "I") {
+        e.preventDefault();
+        return false;
+    }
+    // Blokir Ctrl+Shift+J (Console)
+    if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "J") {
+        e.preventDefault();
+        return false;
+    }
+    // Blokir Ctrl+Shift+C (Element picker)
+    if (e.shiftKey && e.ctrlKey && e.key.toUpperCase() === "C") {
+        e.preventDefault();
+        return false;
+    }
+    // Blokir Ctrl+U (View Source)
+    if (e.ctrlKey && e.key.toUpperCase() === "U") {
+        e.preventDefault();
+        return false;
+    }
+});
     </script>
 </body>
 </html>
